@@ -15,38 +15,150 @@
     <a id="logo" href="index.html">
       <img src="logo.png" alt="logo">
     </a>
-    <nav class="frontnav">
-      <input type="checkbox" id="m">
-      <label for="m">&#9776;</label>
+    <nav class="navigation">
+      <button onclick="openMenu()" id="burger-menu">
+        <svg id="closed" width="35px" height="35px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>closed_menu</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                <g id="closed_menu" stroke="#000000">
+                    <path d="M7.5,25.5 L43.5138862,25.5" id="Line"></path>
+                    <path d="M7.5,38.5 L43.5138862,38.5" id="Line-Copy-2"></path>
+                    <path d="M7.5,12.5 L43.5138862,12.5" id="Line-Copy"></path>
+                </g>
+            </g>
+        </svg>
+        <svg id="opened" width="35px" height="35px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>menu</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                <g id="menu" stroke="#000000">
+                    <path d="M13,13 L38.4656632,38.4656632" id="Line-Copy-2"></path>
+                    <path d="M38.4656632,13 L13,38.4656632" id="Line-Copy"></path>
+                </g>
+            </g>
+        </svg>
+      </button>
 
-      <template id="linkTemplate">
+      <template id="navigationTemplate">
       <a href="#">Item1</a></template>
-
-
+      <div class="btnlogin">
+          <button class="login">Log In</button>
+      </div>
     </nav>
   </header>
-  <div class="div1">
-    <span class="spanclass">Events gallery</span>
+
+
+  <div class="categoriesselection">
+    <div class="dropdown">
+        <a class="category-dropdown" href="#">Music</a>
+        <div class="dropdown-content">
+          <a href="#">Jazz</a>
+          <a href="#">Alternative</a>
+          <a href="#">People</a>
+          <a href="#">Pop</a>
+          <a href="#">World</a>
+          <a href="#">Metal</a>
+        </div>
+    </div>
+      <div class="dropdown">
+    <a class="category-dropdown" href="#">Movie</a>
+    <div class="dropdown-content">
+      <a href="#">Cult</a>
+      <a href="#">Nature</a>
+      <a href="#">Documentary</a>
+      <a href="#">Horror</a>
+      <a href="#">Independent</a>
+      <a href="#">Music</a>
+      <a href="#">Drama</a>
+    </div>
+  </div>
+      <div class="dropdown">
+    <a class="category-dropdown" href="#">Performance art</a>
+    <div class="dropdown-content">
+      <a href="#">Dance</a>
+      <a href="#">Theater</a>
+    </div>
+  </div>
+      <div class="dropdown">
+    <a class="category-dropdown" href="#">Spoken Word</a>
+    <div class="dropdown-content">
+      <a href="#">Stadup</a>
+      <a href="#">Poetry Slam</a>
+      <a href="#">Debate</a>
+      <a href="#">Quiz</a>
+      <a href="#">Storytelling</a>
+    </div>
+  </div>
+  <div class="dropdown">
+<a class="category-dropdown" href="#">Other</a>
+<div class="dropdown-content">
+  <a href="#">Food</a>
+</div>
+</div>
   </div>
   <main>
     <section id="list"></section>
 
 
   </main>
-  <h3>Categories</h3>
+  <!-- <h3>Categories</h3> -->
 
   <template id="eventTemplate">
-        <article class="event">
-            <h1></h1>
-            <img src="" alt="">
-            <div class="excerpt"></div>
-            <p class="price">Price: <span></span> DKK</p>
-            <button class="read-more" href="event.html">Read more</button>
-        </article>
+    <article class="event">
+      <h1></h1>
+      <img src="" alt="">
+      <div class="excerpt"></div>
+        <p class="price">Price: <span></span> DKK</p>
+      <div class="buttonreadmorediv">
+          <button class="read-more" href="event.html">Read more</button>
+      </div>
+    </article>
+  </template>
 
-    </template>
+  <div class="line"></div>
+
   <footer id="footer">
-    Footer comes here!!
+    <ul class="footerlinks">
+      <li>EVENTS</li>
+        </br>
+      <li>All events</li>
+      <li>Bastard Café</li>
+      <li>Spisehuset Fair</li>
+    </ul>
+  <ul class="footerlinks">
+    <li>RENTAL</li>
+      </br>
+    <li>SALON K - Private</li>
+    <li>SALON K - Business</li>
+    <li>Events</li>
+  </ul>
+  <ul class="footerlinks">
+    <li>SWITCH</li>
+      </br>
+    <li>Press</li>
+    <li>The structure of the house</li>
+    <li>Booking</li>
+    <li>Vacancies</li>
+  </ul>
+  <ul class="footerlinks">
+    <li>JOIN!</li>
+      </br>
+    <li>DIY</li>
+    <li>Vacancies</li>
+    <li>About the house</li>
+  </ul>
+  <div class="socialmedia">
+    <img src="facebook.png" alt="">
+    <img src="instagram.png" alt="">
+    <img src="flickr.png" alt="">
+    <img src="twitter.png" alt="">
+  </div>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>

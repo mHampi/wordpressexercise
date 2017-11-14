@@ -1,3 +1,19 @@
+let menu = document.querySelector('#burger-menu');
+let logo = document.querySelector('#logo');
+let navigation = document.querySelector('#navigationTemplate');
+let body = document.querySelector('body');
+
+function openMenu() {
+  menu.classList.toggle('open');
+  navigation.classList.toggle('active');
+  body.classList.toggle('overflow');
+  if (logo.style.display == 'none') {
+    logo.style.display = 'block';
+  } else {
+    logo.style.display = 'none';
+  }
+}
+
 function getAllEvents() {
   fetch("http://artingineer.dk/wordpress/wp-json/wp/v2/events?_embed")
     .then(res => res.json())
@@ -25,18 +41,13 @@ function getMenue() {
 
 function showMenue(tags) {
   console.log(tags);
-  let lt = document.querySelector("#linkTemplate").content;
+  let lt = navigation.content;
   tags.forEach(function(tag) {
     let clone = lt.cloneNode(true);
-    let parent = document.querySelector(".frontnav");
     clone.querySelector("a").textContent = tag.name;
     clone.querySelector("a").setAttribute("href", "index1.html?tagid=" + tag.id);
-    parent.appendChild(clone);
-
-
-  })
-
-
+    navigation.appendChild(clone);
+  });
 }
 
 function showSingleEvent(json) {
