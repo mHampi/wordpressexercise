@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+</head>
+
+<body>
+
+  <header id="header">
+    <a id="logo" href="index.html">
+      <img src="logo.png" alt="logo">
+    </a>
+    <nav class="frontnav">
+      <input type="checkbox" id="m">
+      <label for="m">&#9776;</label>
+
+      <template id="linkTemplate">
+      <a href="#">Item1</a></template>
+
+
+    </nav>
+  </header>
+  <div class="div1">
+    <span class="spanclass">Events gallery</span>
+  </div>
+  <main>
+    <section id="list"></section>
+
+
+  </main>
+  <h3>Categories</h3>
+
+  <template id="eventTemplate">
+        <article class="event">
+            <h1></h1>
+            <img src="" alt="">
+            <div class="excerpt"></div>
+            <p class="price">Price: <span></span> DKK</p>
+            <button class="read-more" href="event.html">Read more</button>
+        </article>
+
+    </template>
+  <footer id="footer">
+    Footer comes here!!
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
