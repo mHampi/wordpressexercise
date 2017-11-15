@@ -14,11 +14,13 @@ body.overflow {
 }
 
 nav {
-  grid-area: na
+  grid-area: na;
+  display: flex;
+  flex-direction: row;
 }
 
 footer {
-  grid-area: ft
+  grid-area: ft;
 }
 
 header {
@@ -40,7 +42,7 @@ article img {
   height: auto
 }
 
-.login {
+.btnlogin {
   color: black;
   border: none;
   text-decoration: none;
@@ -50,19 +52,117 @@ article img {
   cursor: pointer;
   background-color: #EDF7FF;
   font-weight: 500;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.login:hover {
+.btnlogin:hover {
   background-color: #C5E2FA;
 }
-.login:active {
+
+.btnlogin:active {
   background-color: #90BADB;
 }
 
-.btnlogin {
-  margin-top: 15px;
-  margin-right: 15px;
-  margin-left: 20px;
+#loginoverlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(65, 81, 90, 0.80);
+  top: 0;
+  z-index: 10;
+}
+
+#loginoverlay.show {
+  display: block;
+}
+
+.overlaybox {
+  background-color: white;
+  margin: 0 auto;
+  padding: 70px;
+  margin-top: 150px;
+  z-index: 11;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.connectbutton {
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 19px 30px;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 280px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.textlogin h1 {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.register {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.register a {
+  color: #C81C1C;
+  text-decoration: none;
+}
+
+.register a:hover {
+  color: black;
+}
+
+.btn1 {
+  background-color: #325595;
+}
+
+.btn1:hover {
+  background-color: rgba(50, 85, 149, 0.90);
+}
+
+.btn2 {
+  background-color: #d14836;
+}
+
+.btn2:hover {
+  background-color: rgba(209, 72, 54, 0.90);
+}
+
+.btn3 {
+  background-color: #1da1f2;
+}
+
+.btn3:hover {
+  background-color: rgba(29, 161, 242, 0.7);
+}
+
+.closelogin img {
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.closelogin {
+  float: right;
+  background-color: white;
 }
 
 #list {
@@ -142,22 +242,22 @@ article img {
   font-weight: 600;
 }
 
-.categoriesselection {
-  margin-top: 130px;
-  margin-bottom: 50px;
+#categoriesTemplate {
+  margin-top: 110px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.categoriesselection a {
+#categoriesTemplate a {
   text-decoration: none;
   font-weight: 500;
   color: black;
   font-size: 18px;
 }
 
-.categoriesselection .category-dropdown:hover {
+#categoriesTemplate a:hover {
   color: #C81C1C;
   text-decoration: underline;
 }
@@ -174,7 +274,6 @@ article img {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
-  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -203,12 +302,13 @@ article img {
 
 .socialmedia img {
   height: 30px;
-  padding: 5px;
+  padding: 3px;
+  cursor: pointer;
 }
 
-.socialmedia {
-  margin-top: 15px;
-}
+
+/*.socialmedia {
+}*/
 
 #footer {
   display: grid;
@@ -226,7 +326,7 @@ article img {
   line-height: 1.5;
   letter-spacing: 0.5px;
   list-style: none;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 #footer li:hover {
@@ -234,18 +334,22 @@ article img {
 }
 
 #logo img {
-  width: 100px;
+  width: 80px;
   float: left;
   margin-top: 20px;
-  margin-left: 25px;
-  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
 
-#navigationTemplate {
+.desktopmenu {
   display: none;
 }
 
-#navigationTemplate.active {
+.btnlogindiv {
+  display: none;
+}
+
+.desktopmenu.active {
   top: 0;
   left: 0;
   width: 100vw;
@@ -257,7 +361,7 @@ article img {
   background-color: #EDF7FF;
 }
 
-#navigationTemplate.active a {
+.desktopmenu.active a {
   text-decoration: none;
   padding: 10px;
   font-size: 20px;
@@ -288,6 +392,7 @@ article img {
 
 .navigation a {
   color: black;
+  font-size: 14px;
 }
 
 .navigation a:hover {
@@ -314,11 +419,18 @@ article img {
   #burger-menu {
     display: none;
   }
-  #navigationTemplate {
+  .desktopmenu {
     display: flex;
   }
-  #navigationTemplate a {
+  .desktopmenu a {
     padding: 20px
+  }
+  .btnlogindiv {
+    display: flex;
+    justify-content: flex-end;
+    /*margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 20px;*/
   }
   #footer {
     grid-template-columns: repeat(5, 1fr);

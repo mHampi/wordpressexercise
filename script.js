@@ -1,11 +1,27 @@
 let menu = document.querySelector('#burger-menu');
 let logo = document.querySelector('#logo');
-let navigation = document.querySelector('#navigationTemplate');
+let navigation = document.querySelector('#categoriesTemplate');
+let navmenu = document.querySelector('.desktopmenu');
 let body = document.querySelector('body');
+let closeIcon = document.querySelector('.closelogin');
+let logInButton = document.querySelector('.btnlogin');
+let loginoverlay = document.querySelector('#loginoverlay');
+
+
+  logInButton.addEventListener("click", showLogIn);
+
+function showLogIn() {
+loginoverlay.classList.toggle('show');
+closeIcon.addEventListener("click", hideLogIn);
+}
+
+function hideLogIn() {
+  loginoverlay.classList.toggle('show');
+}
 
 function openMenu() {
   menu.classList.toggle('open');
-  navigation.classList.toggle('active');
+  navmenu.classList.toggle('active');
   body.classList.toggle('overflow');
   if (logo.style.display == 'none') {
     logo.style.display = 'block';

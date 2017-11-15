@@ -10,12 +10,36 @@
 </head>
 
 <body>
+  <div id="loginoverlay">
+      <a class="closelogin"><img src="close.png" alt=""></a>
+    <div class="overlaybox">
+      <div class="textlogin">
+        <h1><b>Log in with your account</b></h1>
+        <button class="connectbutton btn1">Connect with Facebook</button>
+        <button class="connectbutton btn2">Connect with your e-mail</button>
+        <button class="connectbutton btn3">Connect with Twitter</button>
+        <div class="register">
+          <p><b>Not a member yet?</b></p><a href="#"><b>Register now</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <header id="header">
     <a id="logo" href="index.html">
       <img src="logo.png" alt="logo">
     </a>
     <nav class="navigation">
+      <div class="desktopmenu">
+        <a href="#">All Events</a>
+        <a href="#">About Us</a>
+        <a href="#">Rental</a>
+        <a href="#">Volunteering</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="btnlogindiv">
+        <a class="btnlogin">Log In</a>
+      </div>
       <button onclick="openMenu()" id="burger-menu">
         <svg id="closed" width="35px" height="35px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
@@ -43,17 +67,13 @@
             </g>
         </svg>
       </button>
-
-      <template id="navigationTemplate">
-      <a href="#">Item1</a></template>
-      <div class="btnlogin">
-          <button class="login">Log In</button>
-      </div>
     </nav>
   </header>
 
+  <template id="categoriesTemplate">
+      <a href="#">Item1</a></template>
 
-  <div class="categoriesselection">
+  <!-- <div class="categoriesselection">
     <div class="dropdown">
         <a class="category-dropdown" href="#">Music</a>
         <div class="dropdown-content">
@@ -100,7 +120,7 @@
   <a href="#">Food</a>
 </div>
 </div>
-  </div>
+  </div> -->
   <main>
     <section id="list"></section>
 
@@ -125,39 +145,39 @@
   <footer id="footer">
     <ul class="footerlinks">
       <li>EVENTS</li>
-        </br>
+      </br>
       <li>All events</li>
       <li>Bastard Café</li>
       <li>Spisehuset Fair</li>
     </ul>
-  <ul class="footerlinks">
-    <li>RENTAL</li>
+    <ul class="footerlinks">
+      <li>RENTAL</li>
       </br>
-    <li>SALON K - Private</li>
-    <li>SALON K - Business</li>
-    <li>Events</li>
-  </ul>
-  <ul class="footerlinks">
-    <li>SWITCH</li>
+      <li>SALON K - Private</li>
+      <li>SALON K - Business</li>
+      <li>Events</li>
+    </ul>
+    <ul class="footerlinks">
+      <li>SWITCH</li>
       </br>
-    <li>Press</li>
-    <li>The structure of the house</li>
-    <li>Booking</li>
-    <li>Vacancies</li>
-  </ul>
-  <ul class="footerlinks">
-    <li>JOIN!</li>
+      <li>Press</li>
+      <li>The structure of the house</li>
+      <li>Booking</li>
+      <li>Vacancies</li>
+    </ul>
+    <ul class="footerlinks">
+      <li>JOIN!</li>
       </br>
-    <li>DIY</li>
-    <li>Vacancies</li>
-    <li>About the house</li>
-  </ul>
-  <div class="socialmedia">
-    <img src="facebook.png" alt="">
-    <img src="instagram.png" alt="">
-    <img src="flickr.png" alt="">
-    <img src="twitter.png" alt="">
-  </div>
+      <li>DIY</li>
+      <li>Vacancies</li>
+      <li>About the house</li>
+    </ul>
+    <div class="socialmedia">
+      <img src="facebook.png" alt="">
+      <img src="instagram.png" alt="">
+      <img src="flickr.png" alt="">
+      <img src="twitter.png" alt="">
+    </div>
     </div>
   </footer>
   <script src="script.js"></script>
